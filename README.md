@@ -1,0 +1,2 @@
+# PrakseGalaDarbs
+Prakses gala darbs
