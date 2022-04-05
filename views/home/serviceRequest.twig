@@ -1,0 +1,113 @@
+
+<!-- Servisa apmeklejuma tabula -->
+<div class="modal fade" id="ServisaAp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Servisa apmeklējuma pieteikums</h4><br>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">           
+          <span aria-hidden="true">&times;</span></button>
+      </div>
+
+
+        <div class="ServisaApTab">
+            <form id="contactus">
+            <label data-error="wrong" data-success="right" class="hideRow" for="inputClientName">Jūsu vārds:</label>
+                <fieldset> <input id="inputClientName" name="name" class="form_data" placeholder="" type="text" tabindex="1" required autofocus> </fieldset>
+            <label data-error="wrong" data-success="right" class="hideRow" for="inputClientSurname">Jūsu uzvārds:</label>
+                <fieldset> <input id="inputClientSurname" name="surname" class="form_data" placeholder="" type="text" tabindex="2" required autofocus> </fieldset>
+            <label data-error="wrong" data-success="right" class="hideRow" for="inputClientEmail">Jūsu ē-pasts:</label>
+                <fieldset> <input id="inputClientEmail" name="email" class="form_data" placeholder="" type="email" tabindex="3" required> </fieldset>
+            <label data-error="wrong" data-success="right" class="hideRow" for="inputClientTelNr">Jūsu telefona Nummurs:</label>   
+                <fieldset> <input id="inputClientTelNr" name="telNr" class="form_data" placeholder="" type="tel" tabindex="4" required> </fieldset>
+            <label data-error="wrong" data-success="right" class="hideRow" for="inputClientVehMarkAndModel">Auto marka un modelis:</label>      
+                <fieldset> <input id="inputClientVehMarkAndModel" class="form_data" name="veh" placeholder="" type="text" tabindex="5" required autofocus> </fieldset>    
+            <label data-error="wrong" data-success="right" class="hideRow" for="inputClientVinCode">Auto VIN vai reģ. nummurs:</label>      
+                <fieldset> <input id="inputClientVinCode" name="vinOrReg" class="form_data" placeholder="" type="text" tabindex="6" required autofocus> </fieldset>
+            <label data-error="wrong" data-success="right" class="hideRow" for="inputClientDatePick">Izvēlaties apmeklējuma dienu:</label>  
+            <div id="datepicker">
+                <input type="text" id="inputClientDatePick" name="date" type="text" class="form-control datepickstart form_data" required/>
+            </div>
+            <label data-error="wrong" data-success="right" class="hideRow" for="inputClientProblem">Problēmas izklāsts:</label> 
+                <fieldset> <textarea id="inputClientProblem" name="problem" class="form_data" placeholder="" tabindex="7" required></textarea> </fieldset>
+
+                <p class="hideRow modal-title w-100">Pēc pieteikuma nosūtīšanas, ar jums sazināsies servisa darbinieks, kurš precizēs informāciju.</p>
+            <fieldset> 
+                <button type="submit" name="serviceRequestSubmit" id="serviceRequestSubmit" class="btn btn-success" onclick="save_data(); return false;">Nosūtīt</button>
+            </fieldset>
+                
+            <div class="alert alert-success text-center" id="showRow" style="display:none" >Pieteikums veiksmīgi nosūtīts! <br> Ar jums sazināsies autoservisa darbinieks.</div>    
+            </form>  
+        </div>
+
+
+    </div>
+  </div>
+</div>
+
+<script>
+var date = new Date();
+date.setDate(date.getDate()+1);
+
+    $('.datepickstart').datepicker({
+        autoclose: true,
+        format: 'dd/mm/yyyy',
+        language: 'lv',
+        daysOfWeekHighlighted: "0,6",
+        startDate: date
+    });
+
+ 
+function save_data()
+{
+	var form_element = document.getElementsByClassName('form_data');
+
+	var form_data = new FormData();
+
+	for(var count = 0; count < form_element.length; count++)
+	{
+		form_data.append(form_element[count].name, form_element[count].value);
+	}
+
+	document.getElementById('serviceRequestSubmit').disabled = true;
+
+    jQuery('.form_data').hide();
+    jQuery('.hideRow').hide();  
+    jQuery('#serviceRequestSubmit').hide();
+    jQuery('#showRow').show();
+
+	var ajax_request = new XMLHttpRequest();
+
+	ajax_request.open('POST', '/serviceRequest');
+
+	ajax_request.send(form_data);
+
+	ajax_request.onreadystatechange = function()
+
+	{
+		if(ajax_request.readyState == 4 && ajax_request.status == 200)
+		{
+			document.getElementById('submit').disabled = false;
+			var response = JSON.parse(ajax_request.responseText);	
+		}
+	}
+}
+
+</script>
+
+<style>
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover {
+
+    text-shadow: none;
+}
+.datepicker-dropdown {
+background-color: #F9F9F9;
+border-radius: 10px;
+}
+.datepicker table tr td.weekend{
+    color:red;
+}
+</style>
+

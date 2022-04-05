@@ -1,0 +1,57 @@
+
+
+{% for currentUser in currentUsers %}
+<div id="editCurrentUser_{{currentUser.id}} "class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <img class=" mt-5" width="150px" src="img/options.png">
+                <span class="font-weight-bold">{{currentUser.name|title}} {{currentUser.surname|title}}</span>
+                <span class="text-black-50">{{currentUser.email|capitalize}}</span>
+                <div class="d-block d-md-none p-2 py-2">
+                    <div class=" d-flex border justify-content-center align-items-center experience"><span>Klase: <b>{% if currentUser.class == 1 %} Adminstrātors{% else %}Lietotājs{% endif %}</b></span></div><br>
+                </div>
+                
+                <span> </span>
+                </div>
+            </div>
+            <div class="col-md-5 border-right">
+            <form action="/users/editCurrentUser" method="POST">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profila iestatījumi</h4>
+                    </div>
+                    {# {% if usernameExistsError == true %}
+                        <div class="alert-light text-danger text-center py-3">{{usernameExistsError}}</div>
+                    {% endif %} #}
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Vārds</label><input type="text" name="name" class="form-control" placeholder="{{currentUser.name|title}}" disabled></div>
+                        <div class="col-md-6"><label class="labels">Uzvārds</label><input type="text" name="surname" class="form-control" placeholder="{{currentUser.surname|title}}" disabled></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Telefona Nr.</label><input type="number" name="phoneNr" class="form-control" placeholder="Ievadiet telefona nummuru" value="{{currentUser.phoneNr}}" required></div>
+                        <div class="col-md-12"><label class="labels">E-pasts</label><input type="text" name="email" class="form-control" placeholder="Ievadiet E-pastu" value="{{currentUser.email|capitalize}} " required></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Lietotājvārds</label><input type="text" name="username" class="form-control" placeholder="Ievadiet lietotājvārdu" value="{{currentUser.username}}" required></div>
+                        <input type="hidden" name="oldPassword" class="form-control" value="{{currentUser.password}}">
+                        <div class="col-md-12"><label class="labels">Parole</label><input type="password" name="password" class="form-control" placeholder="Parole"></div>
+                        {# <div class="col-md-6"><label class="labels">Parole</label><input type="text" class="form-control" placeholder="Parole"></div>#}
+                    </div>
+                    <div class="mt-5 text-center">
+                    <button type="submit" name="editCurrentUser" value="{{currentUser.id}}" class="btn btn-success profile-button">Saglabāt</button>
+                    </div>
+                </div>
+             </form>
+            </div>
+            <div class="d-none d-md-block col-md-4">
+                <div class=" p-2 py-2">
+                    <div class=" d-flex border justify-content-center align-items-center experience"><span>Klase: <b>{% if currentUser.class == 1 %} Adminstrātors{% else %}Lietotājs{% endif %}</b></span></div><br>
+                </div>
+            </div>
+    </div>
+</div>
+{% endfor %}
+
+
+

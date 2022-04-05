@@ -1,0 +1,98 @@
+{# Modālais logs prieks lietotāja rediģēšanas #}
+
+<div id="ModalShow2_{{user.id}}" class="modal fade ">
+   <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Lietotāja rediģēšana</h5>
+        </div>
+        <form action="/users/editMembers" method="POST">
+          <div class="modal-body">
+                  <div class="row">
+                      <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                          <label>Lietotājvārds</label>
+                          <input type="text" name="username" value="{{user.username}}" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-md-6 pl-1">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">E-pasts</label>
+                          <input type="text" name="email" value="{{user.email}}" class="form-control" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6 pl-1">
+                        <div class="form-group">
+                          <label>Vārds</label>
+                          <input type="text" name="name" value="{{user.name|title}}" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-md-6 pl-1">
+                        <div class="form-group">
+                          <label>Uzvārds</label>
+                          <input type="text" name="surname" value="{{user.surname|title}}" class="form-control" />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-4 pr-1">
+                        <div class="form-group">
+                          <label>Parole</label>
+                          {# <input type="password" name="password" value="{{user.password}}" class="form-control" aria-describedby="passwordHelpInline"/> #}
+                        <input type="hidden" name="oldPassword" class="form-control" value="{{user.password}}"/>
+                        <input type="password" name="password" class="form-control" placeholder="Parole" aria-describedby="passwordHelpInline"/>
+                        </div>
+                      </div>
+                      <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                          <label>Telefona Numurs</label>
+                          <input type="tel" min="0" name="phoneNr" value="{{user.phoneNr}}" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                          <label>Klase</label>
+                          <select name="class" class="form-select" aria-label="Default select example">
+                              <option selected>{% if user.class == 1 %}Administrators{% else %}Lietotājs{% endif %}</option>
+                              <option value="0">Lietotājs</option>
+                              <option value="1">Administrators</option>
+                          </select>
+                        </div>
+                      </div>
+                  </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="submit" name="editMember" value="{{user.id}}" class="btn btn-success">Apstiprināt</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aizvērt</button>   
+          </div>
+      </form>        
+      </div>
+   </div>
+</div>
+
+
+{# Modālais logs, ieraksta dzēšanas pārjautāšanas logs #}
+
+<div id="ModalShowDelete2_{{user.id}}" class="modal fade ">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center><h4 class="modal-title" id="myModalLabel">Izdzēst lietotāju</h4></center>
+            </div>
+        <form action="/users/delete" method="POST">
+            <div class="modal-body">	
+            	<p class="text-center">Vai esat parliecināts ka vēlaties dzēst?</p>
+				<h2 class="text-center">{{user.name}} {{user.surname}}</h2>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atcelt</button>   
+                <button type="submit" name="deleteMember" value="{{user.id}}" class="btn btn-danger">Dzēst</button>
+            </div>
+      </form> 
+        </div>
+    </div>
+</div>
+

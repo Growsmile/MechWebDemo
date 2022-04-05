@@ -1,0 +1,366 @@
+{# Tāmes labošanas modālais logs #}
+
+<div id="ModalShowEditHistoryForm_{{modalVehicleHistoryVehId}}">
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+    <img src="img/logo.png" alt="Logo100X100Png" width="150" height="150">
+    </div>
+    <div class="col-md-auto">
+    <p class="text-center h1">DP Autoserviss</p>
+    </div>
+    <div class="col col-lg-5">
+    
+    </div>
+  </div>
+
+{# Pamatdati #}
+<form class="row g-3" action="/users/VehicleHistoryCreate" method="POST">
+    <div class="col-md-6">
+      <label for="inputDatums" class="form-label">Datums</label>
+      <input type="text" class="form-control" id="inputDatums" name="date">
+    </div>
+
+    <div class="col-md-6">
+      <label for="inputPhoneNummber" class="form-label">Klienta tālrunis</label>
+      <input type="text" class="form-control" id="inputPhoneNummber" name="clientNr" required>
+    </div>
+    <div class="col-md-6">
+      <label for="inputMarka" class="form-label">Marka</label>
+      <input type="text" list="Brand-List" class="form-control" id="inputMarka" name="brand" required>
+      <datalist id="Brand-List">
+          <option value="ACURA">ACURA</option>
+          <option value="ASTON MARTIN">ASTON MARTIN</option>
+          <option value="AUDI">AUDI</option>
+          <option value="BENTLEY">BENTLEY</option>
+          <option value="BMW">BMW</option>
+          <option value="CADILLAC">CADILLAC</option>
+          <option value="CHEVROLET">CHEVROLET</option>
+          <option value="CHRYSLER">CHRYSLER</option>
+          <option value="DODGE">DODGE</option>
+          <option value="FORD">FORD</option>
+          <option value="GMC">GMC</option>
+          <option value="HONDA">HONDA</option>
+          <option value="HUMMER">HUMMER</option>
+          <option value="HYUNDAI">HYUNDAI</option>
+          <option value="INFINITI">INFINITI</option>
+          <option value="ISUZU">ISUZU</option>
+          <option value="JAGUAR">JAGUAR</option>
+          <option value="JEEP">JEEP</option>
+          <option value="KIA">KIA</option>
+          <option value="LAND ROVER">LAND ROVER</option>
+          <option value="LEXUS">LEXUS</option>
+          <option value="LINCOLN">LINCOLN</option>
+          <option value="LOTUS">LOTUS</option>
+          <option value="MASERATI">MASERATI</option>
+          <option value="MAZDA">MAZDA</option>
+          <option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
+          <option value="MINI">MINI</option>
+          <option value="MITSUBISHI">MITSUBISHI</option>
+          <option value="NISSAN">NISSAN</option>
+          <option value="OPEL">OPEL</option>          
+          <option value="PONTIAC">PONTIAC</option>
+          <option value="PORSCHE">PORSCHE</option>
+          <option value="SAAB">SAAB</option>
+          <option value="SUBARU">SUBARU</option>
+          <option value="SUZUKI">SUZUKI</option>
+          <option value="TOYOTA">TOYOTA</option>
+          <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+
+    </div>
+    <div class="col-md-6">
+      <label for="inputModelis" class="form-label">Modelis</label>
+      <input type="text" class="form-control" id="inputModelis" name="model" required>
+    </div>
+    <div class="col-md-6">
+      <label for="inputVin" class="form-label">Vin</label>
+      <input type="text" class="form-control" id="inputVin" name="vin" required>
+    </div>  
+    <div class="col-md-6">
+      <label for="inputMotrTilp" class="form-label">Motora tilpums</label>
+      <input type="text" class="form-control" id="inputMotrTilp" name="Engine" required>
+    </div>
+    <div class="col-md-6">
+      <label for="inputNobrauk" class="form-label">Nobraukums</label>
+      <input type="text" class="form-control" id="inputNobrauk" name="vehRange" required>
+    </div>      
+    <div class="col-md-6">
+      <label for="inputRegGads" class="form-label">Reģistrācijas gads</label>
+      <input type="number" list="RegYear-List" class="form-control" id="inputRegGads" name="registrationDate" required>
+        <datalist id="RegYear-List">
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option> 
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+          <option value="2009">2009</option>
+          <option value="2008">2008</option>
+          <option value="2007">2007</option>
+          <option value="2006">2006</option>
+          <option value="2005">2005</option>
+          <option value="2004">2004</option>
+          <option value="2003">2003</option>
+          <option value="2002">2002</option>
+          <option value="2001">2001</option>
+          <option value="2000">2000</option>
+          <option value="1999">1999</option>
+          <option value="1998">1998</option>
+          <option value="1997">1997</option>
+          <option value="1996">1996</option>
+          <option value="1995">1995</option>
+          <option value="1994">1994</option>
+          <option value="1993">1993</option>
+          <option value="1992">1992</option>
+          <option value="1991">1991</option>
+          <option value="1990">1990</option>
+          <option value="1989">1989</option>
+          <option value="1988">1988</option>
+          <option value="1987">1987</option>
+          <option value="1986">1986</option>
+          <option value="1985">1985</option>
+          <option value="1984">1984</option>
+          <option value="1983">1983</option>
+          <option value="1982">1982</option>
+          <option value="1981">1981</option>
+          <option value="1980">1980</option>          
+    </div>          
+    <div class="col-md-6">
+      <label for="inputNummurzīme" class="form-label">Numura zīme</label>
+      <input type="text" class="form-control" id="inputNummurzīme" name="nummberPlate" required>
+    </div>
+    <div class="col-md-6">
+      <label for="inputMeistars" class="form-label">Meistars pieņēma</label>
+      <input type="text" class="form-control" id="inputMeistars" name="master" required>
+    </div>  
+
+    </br>
+{# Diagnostika #}
+      <div class="container">  
+        <div class="form-group">  
+            <div class="table-responsive">  
+              <table class="table" id="dynamic_field">  
+              <th style="width: 100%" >Diagnostika</th>
+                  <tr>                           
+                    <td><input type="text" name="name[]" placeholder="Diagnostika" class="form-control name_list"/></td>  
+                    <td><button type="button" name="add" id="add" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i></button></td>                                      
+                  </tr>  
+              </table>     
+            </div>  
+        </div>  
+      </div> 
+{# Darbs #}
+      <div class="container">  
+        <div class="form-group">  
+            <div class="table-responsive">  
+                <table class="table" id="dynamic_field2">  
+                  <tr>         
+                    <th style="width: 80%">Darbs</th>
+                    <th style="width: 20%">Summa</th>
+                    </tr> 
+                    <tr>
+                    <div class="row">
+                    <div class="col-md-8 pr-1">                           
+                    <td><input type="text" name="darbs[]" placeholder="Darbs" class="form-control darbs_list"/></td>
+                    </div>
+                    <div class="col-md-4 pr-1">
+                    <td><input type="number" onBlur="findTotalPrice()" value="0" name="darbsSumma[]"  placeholder="Summa" class="jobPrice form-control darbs_list" min="0.00" max="10000.00" step="0.01"/></td>   
+                    <td><button type="button" name="add2" id="add2" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i></button></td>    
+                    </div>
+                    </div>                                  
+                  </tr>  
+              </table>     
+            </div>  
+        </div>  
+      </div>
+ {# Detaļas #}   
+      <div class="container">  
+        <div class="form-group">  
+            <div class="table-responsive">  
+                <table class="table" id="dynamic_field3">
+                    <tr>         
+                      <th style="width: 70%" >Detaļas</th>
+                      <th style="width: 10%" >Cena</th>
+                      <th style="width: 10%" >Daudzums</th>
+                      <th style="width: 10%" >Kopā</th>
+                      </tr>
+                    <tr>                           
+                      <td><input type="text" name="detalas[]" placeholder="Detaļa" class="form-control detalas_list"/></td>
+                      <td><input type="number" onBlur="findTotalPrice()" name="detalasPrice[]" value="0" class="Price form-control detalas_list" min="0.00" max="10000.00" step="0.01"></td>
+                      <td><input type="number" onBlur="findTotalPrice()" name="detalasQuantity[]" value="0" class="Quantity form-control detalas_list" min="0" max="10000" step="1"></td>
+                      <td><input type="number" class="total form-control detalas_list" value="0" style="border: none" readonly></td>
+                      <td><button type="button" name="add3" id="add3" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i></button></td>                                      
+                    </tr>
+                </table>    
+            </div>  
+        </div>
+
+      <br/>
+      <div class="col-12">
+        <div class="col-12" >Darbs: &euro;<input type="number" class="col-5" id='jobTotal' value="0" style="border: none"readonly></input></div>
+        <div class="col-12" >Detaļas: &euro;<input type="number" class="col-5" id='partsTotal' value="0" style="border: none"readonly></input></div>
+      </div>  
+      <div class="col-12">
+        <div class="col-12 text-end">Kopā bez PVN: &euro;<input type="number" class="col-1" id='sumEndTotal' value="0" style="border: none"readonly></input></div>
+      </div>
+      <div class="col-12">
+        <div class="col-12 text-end">PVN 21%: &euro;<input type="number" class="col-1" id='PvnProcentCalcFloat' value="0" style="border: none"readonly></input></div>
+      </div>
+      <div class="col-12">
+        <div class="col-12 text-end">Kopā ar PVN: &euro;<input type="number" class="col-1" id='PvnProcentCalcEndSum' value="0" style="border: none"readonly></input></div>
+      </div>  
+      <br/>
+      </div>    
+
+  </div>
+
+    <div class="col-12">
+      <button type="submit" name="VehicleHistoryCreate" value="VehicleHistoryCreate" id="VehicleHistoryCreate" class="btn btn-success">Saglabāt</button>
+    </div>
+
+  
+
+</form> 
+
+</div>
+
+ <script>  
+
+{# Katraas rindas summas reiķināšana detaļām #}
+    $("table").on("change", "input", function() {
+      var row = $(this).closest("tr");
+      var qty = parseFloat(row.find(".Quantity").val());
+      var price = parseFloat(row.find(".Price").val());
+      var total = qty * price;
+      totalRowPrice = parseFloat(total).toFixed(2);
+      row.find(".total").val(isNaN(totalRowPrice) ? "" : totalRowPrice);
+    });
+    
+{# Darba kopējā summa (jobTotal) #}
+{# Detaļu kopējā summa (partsTotal) #}
+{# kopējā summa bez PVN (sumEndTotal) #}
+{# 21% pvn apreiķins (PvnProcentCalcFloat) #}
+{# kopējā summa ar PVN (PvnProcentCalcEndSum) #}
+function findTotalPrice(){
+
+        var jobPrice = document.getElementsByClassName('jobPrice');   
+        var totVal = 0;
+          for(var i=0;i<jobPrice.length;i++){   
+                  totVal +=  parseFloat(jobPrice[i].value);
+          }
+         jobTotVal = parseFloat(totVal).toFixed(2);
+        document.getElementById('jobTotal').value = jobTotVal;
+        
+
+
+          var arr = document.getElementsByClassName('Price');
+          var scale = document.getElementsByClassName('Quantity');
+          var tot = 0;
+            for(var a=0;a<arr.length;a++){
+                if(arr[a].value != "" && scale[a].value != ""){
+                    tot += parseFloat(scale[a].value) * parseFloat(arr[a].value);
+                }
+            }
+          partsTot = parseFloat(tot).toFixed(2);  
+          document.getElementById('partsTotal').value = partsTot;
+
+
+              var sumEndVal = tot + totVal
+              var sumEnd = parseFloat(sumEndVal).toFixed(2);
+              document.getElementById('sumEndTotal').value = sumEnd;
+
+
+                var PvnProcentCalc = (21 / 100) * sumEndVal;
+                var PvnProcentCalcFloat = parseFloat(PvnProcentCalc).toFixed(2);
+                document.getElementById('PvnProcentCalcFloat').value = PvnProcentCalcFloat;
+
+
+                  var PvnProcentCalcEnd = sumEndVal + PvnProcentCalc;
+                  var PvnProcentCalcEndSum = parseFloat(PvnProcentCalcEnd).toFixed(2);
+                  document.getElementById('PvnProcentCalcEndSum').value = PvnProcentCalcEndSum;
+}
+
+
+{# Tāmes papildlauki #}
+ $(document).ready(function(){  
+      var i=1;  
+      $('#add').click(function(){  
+           i++;  
+           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Diagnostika" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+      });  
+      $(document).on('click', '.btn_remove', function(){  
+           var button_id = $(this).attr("id");   
+           $('#row'+button_id+'').remove();  
+      });  
+      $('#VehicleHistoryCreate').click(function(){            
+           $.ajax({  
+                method:"POST",  
+                data:$('#add_name').serialize(),  
+                success:function(data)  
+                {  
+                     alert(data);  
+                     $('#add_name')[0].reset();  
+                }  
+           });  
+      });  
+ });  
+
+ $(document).ready(function(){  
+      var a=1;  
+      $('#add2').click(function(){  
+           a++;  
+           $('#dynamic_field2').append('<tr id="rows'+a+'"><td><input type="text" name="darbs[]" placeholder="Darbs" class="form-control darbs_list" /></td><td><input type="number" onBlur="findTotalPrice()"value="0" name="darbsSumma[]"  placeholder="Summa" class="jobPrice form-control darbs_list" min="0.00" max="10000.00" step="0.01"/></td><td><button type="button" name="remove" id="'+a+'" class="btn btn-danger btn_remove2">X</button></td></tr>');
+      });  
+      $(document).on('click', '.btn_remove2', function(){  
+           var button_id = $(this).attr("id");   
+           $('#rows'+button_id+'').remove();  
+      });  
+      $('#submit').click(function(){            
+           $.ajax({  
+                method:"POST",  
+                data:$('#add_darbs').serialize(),  
+                success:function(data)  
+                {  
+                     alert(data);  
+                     $('#add_darbs')[0].reset();  
+                }  
+           });  
+      });  
+ });
+
+
+ $(document).ready(function(){  
+      var b=1;  
+
+      $('#add3').click(function(){  
+           b++;
+           $('#dynamic_field3').append('<tr id="rowa'+b+'"><td><input type="text" name="detalas[]" placeholder="Detaļa" class="form-control detalas_list"/></td><td><input type="number" onBlur="findTotalPrice()" name="detalasPrice[]" value="0" class="Price form-control detalas_list" min="0.00" max="10000.00" step="0.01"></td><td><input type="number" onBlur="findTotalPrice()" name="detalasQuantity[]" value="0" class="Quantity form-control detalas_list" min="0" max="10000" step="1"></td><td><input type="number" class="total form-control detalas_list" value="0" style="border: none" readonly></td><td><button type="button" name="remove" id="'+b+'" class="btn btn-danger btn_remove3">X</button></td></tr>');
+      });  
+      $(document).on('click', '.btn_remove3', function(){  
+           var button_id = $(this).attr("id");   
+           $('#rowa'+button_id+'').remove();  
+      });  
+      $('#submit').click(function(){            
+           $.ajax({  
+                method:"POST",  
+                data:$('#add_detalas').serialize(),  
+                success:function(data)  
+                {  
+                     alert(data);  
+                     $('#add_detalas')[0].reset();  
+                }  
+           });  
+      });  
+ });
+
+</script>
+

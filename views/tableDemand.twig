@@ -1,0 +1,37 @@
+<div>
+<div class="col-sm-10">
+<h2>Servisa pieteikumi</h2>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+    <th scope="col"></th>        
+      <th scope="col">Telefona nr.</th>
+      <th scope="col">Auto</th>
+      <th scope="col">Vēlamais datums</th>
+      <th scope="col">Opcijas</th>                
+    </tr>
+  </thead>
+  <tbody>
+  {% for request in requests|reverse %}
+    <tr>
+      <th scope="row">
+        <div class="form-check">
+          {# <input type='checkbox' name='sid[]' data-sid='$sid' value='{{request.id}}' id='CheckReqSenns' class='CheckReqSenn'> #}
+
+          <label>
+            {% include "tableDemandCheckBox.twig" %} 
+          </label>
+
+        </div>
+      </th>
+      <td>{{request.telNr}}</td>
+      <td>{{request.veh}}</td>
+      <th scope="col">{{request.date}}</th>
+        <td><a data-bs-toggle="modal" href="#RequestModal_{{request.id}}"><i class="bi bi-search"></i></a>
+        {% include "requestInfo.twig" %}</td>  
+    </tr>
+{% endfor %}
+</tbody>      
+</table>
+</div>

@@ -1,0 +1,125 @@
+<body>
+
+<div class="table-wrapper">
+  <div class="table-title">
+    <div class="row">
+      <div class="col-sm-9">
+          <h2>Lietotāju pārlūgs</h2>
+      </div>
+        <div class="col-sm-3">
+            <a data-bs-toggle="modal" href="#ModalShow3" class="btn btn-secondary"><i class="bi bi-person-plus"></i> <span>Pievienot lietotāju</span></a>			
+        </div>
+      </div>
+    </div>
+  </div>   
+<div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" class="HideCollum380">ID</th>
+      <th>Lietotājvārds</th>
+        <th class="HideCollum710">E-pasts</th>
+        <th class="HideCollum850">Telefons</th>
+      <th>Klase</th>
+      <th ></th>                  
+    </tr>
+  </thead>
+  <tbody>
+   {% for user in users %}
+    <tr>
+
+        <td scope="row" class="HideCollum380">{{user.id}}</td>
+        <td>{{user.username}}</td>
+          <td class="HideCollum710">{{user.email}}</td>
+          <td class="HideCollum850">{{user.phoneNr}}</td>
+        <td>{% if user.class == 1 %}Administrators{% else %}Lietotājs{% endif %}</td>
+        <td>
+        
+            <div class="btn-group" role="group" aria-label="...">
+
+              <a data-bs-toggle="modal" href="#ModalShow2_{{user.id}}" class="btn btn-labeled btn-warning"><span class="btn-label"><i class="bi bi-pencil-square link-dark"></i></a>
+
+              <a data-bs-toggle="modal" href="#ModalShowDelete2_{{user.id}}" class="btn btn-labeled btn-danger"><span class="btn-label"><i class="bi bi-trash link-dark"></i></a>
+
+            </div>
+        </td> 
+        {% include "edit_Delete_Member.twig" %}         
+    </tr>  
+{% endfor %}    
+  </tbody>
+</table>
+</div>
+
+{# Modālais logs prieks lietotāja pievienošanas #}
+<div class="modal" id="ModalShow3">
+   <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Lietotāja pievienošana</h5>
+        </div>
+        <form action="/users/save" method="POST">
+            {% if usernameExistsError == true %}
+              <div class="alert-light text-danger text-center py-3">{{usernameExistsError}}</div>
+            {% endif %}
+        <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group">
+                        <label>Lietotājvārds</label>
+                        <input type="text" class="form-control" placeholder="Lietotājvārds" name="username" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                       <div class="form-group">
+                        <label for="exampleInputEmail1">E-pasts</label>
+                        <input type="email" class="form-control" placeholder="E-pasts" name="email" required>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <label>Vārds</label>
+                        <input type="text" class="form-control" placeholder="Vārds" name="name" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <label>Uzvārds</label>
+                        <input type="text" class="form-control" placeholder="Uzvārds" name="surname" required>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>Parole</label>
+                        <input type="password" aria-describedby="passwordHelpInline" class="form-control" placeholder="Parole" name="password" required>
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label>Telefona Numurs</label>
+                        <input type="tel" min="0" class="form-control" placeholder="Telefona Numurs" name="phoneNr" required>
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label>Klase</label>
+                        <select  name="class" class="form-select" aria-label="Default select example" required>
+                            <option value="0" selected>Lietotājs</option>
+                            <option value="1">Administrators</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" name="addMember" class="btn btn-success">Apstiprināt</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aizvērt</button>          
+        </div>
+      </form>
+      </div>
+   </div>
+</div>

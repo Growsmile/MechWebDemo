@@ -1,0 +1,645 @@
+<html>
+<body>
+  <style>
+.btnCatalog{
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    position: relative;
+    background-image: linear-gradient(to top, #262626 0px, #404040 10px, #262626 10px, #333 100%);
+}
+.btnCatalog:hover{
+    color: #fff;
+}
+.btnCatalog:after{
+    content: "";
+    width: 0;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+    transition: all 0.35s ease 0s;
+}
+.btnCatalog:hover:after{
+    width: 100%;
+}
+.btnCatalog.btn-sm{
+    padding-bottom: 10px;
+    background-image: linear-gradient(to top, #262626 0px, #404040 8px, #262626 8px, #333 100%);
+}
+.btnCatalog.btn-sm:after{
+    height: 8px;
+}
+.btnCatalog.btn-xs{
+    padding-bottom: 8px;
+    background-image: linear-gradient(to top, #262626 0px, #404040 6px, #262626 6px, #333 100%);
+}
+.btnCatalog.btn-xs:after{
+    height: 6px;
+}
+.btnCatalog.blue:after{
+    background: #5cbcf6;
+}
+}
+@media only  screen and (max-width: 767px){
+    .btn{ margin-bottom: 20px; }
+}
+}
+
+
+    </style>
+
+<div style="background-color: #3b3b3b;padding-top: 65px;">
+<div class="container">
+  <div class="row text-center">
+    <div class=" paddingBtnSides col-12 col-sm-12 col-md-4" style="margin-bottom: 2%;">
+    <button type="button" class="btnCatalog btn-lg blue align-bottom" data-toggle="modal" style="width: 100%;"data-target="#motoruRemontsMod">DZINĒJU REMONTS / PĀRBŪVE / UZLABOŠANA</button>
+    </div>
+    <div class="col-12 col-sm-12 col-md-4 paddingBtnSides" style="margin-bottom: 2%;">
+    <button  type="button" class="btnCatalog btn-lg blue" data-toggle="modal" style="width: 100%; "data-target="#pirmsPirkumaDiag">AUTO PIRMSPIRKUMA DIAGNOSTIKA</button>
+    </div>
+    <div class="col-12 col-sm-12 col-md-4 paddingBtnSides" style="margin-bottom: 2%;">
+    <button  type="button" class="btnCatalog btn-lg blue" data-toggle="modal" style="width: 100%; "data-target="#ElektroDiagMod">ELEKTROSISTĒMU DIAGNOSTIKA – REMONTS</button>
+    </div>
+  </div>
+</div>
+
+<div class="d-none d-md-block">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+      <img src="img/arrow.gif" class="img-fluid animated flash" alt="Arrow">
+      </div>
+      <div class="col">
+      <img src="img/arrow.gif" class="img-fluid" alt="Arrow">
+      </div>
+      <div class="col">
+      <img src="img/arrow.gif" class="img-fluid" alt="Arrow">
+      </div>
+    </div>
+  </div>
+
+
+  <img src="img/CatalogCar.png" class="img-fluid mx-auto d-block" alt="Image">
+
+  <div class="container" style="transform: rotate(180deg);">
+    <div class="row text-center">
+      <div class="col">
+      <img src="img/arrow.gif" class="img-fluid" alt="Arrow">
+      </div>
+      <div class="col">
+      <img src="img/arrow.gif" class="img-fluid" alt="Arrow">
+      </div>
+      <div class="col">
+      <img src="img/arrow.gif" class="img-fluid" alt="Arrow">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row text-center">
+    <div class="col-12 col-sm-12 col-md-4" style="margin-bottom: 2%;">
+    <button  type="button" class="btnCatalog btn-lg blue" data-toggle="modal" style="width: 100%; "data-target="#RitosaDalaMod">RITOŠĀS DAĻAS REMONTS / DIAGNOSTIKA</button>
+    </div>
+    <div class="col-12 col-sm-12 col-md-4" style="margin-bottom: 2%;">
+    <button  type="button" class="btnCatalog btn-lg blue" data-toggle="modal" style="width: 100%; "data-target="#PretKorMod">PRETKOROZIJAS APSTRĀDE UN METINĀŠANA</button>
+    </div>
+    <div class="col-12 col-sm-12 col-md-4" style="margin-bottom: 2%;">
+    <button  type="button" class="btnCatalog btn-lg blue" data-toggle="modal" style="width: 100%; "data-target="#RiepuMontMod">RIEPU MONTĀŽA / BALANSĒŠANA / LĀPĪŠANA</button>
+    </div>
+  </div>
+</div>
+</div>
+<img src="img/svg-path2.svg" alt="triangle" srcset="img/svg-path2.svg">
+
+<!-- Modalie logi -->
+
+<!-- Modal Dzineja remonts -->
+<div class="modal fade" id="motoruRemontsMod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5">
+            <!--Carousel Wrapper-->
+            <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
+              data-ride="carousel">
+              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block w-100"
+                    src="img/MotoruMop.jpg"
+                    alt="Pirmais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/MotoruMop2.jpg"
+                    alt="Otrais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/MotoruMop3.jpg"
+                    alt="Trešais slaids">
+                </div>
+              </div>
+              <!--/.Slides-->
+              <!--Controls-->
+              <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Iepriekšējais</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Nākamais</span>
+              </a>
+              <!--/.Controls-->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-thumb" data-slide-to="0" class="active">
+                  <img src="img/MotoruMop.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb" data-slide-to="1">
+                  <img src="img/MotoruMop2.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb" data-slide-to="2">
+                  <img src="img/MotoruMop3.jpg" width="60">
+                </li>
+              </ol>
+            </div>
+            <!--/.Carousel Wrapper-->
+          </div>
+          <div class="col-lg-7">
+            <h2 class="h2-responsive product-name">
+              <strong>DZINĒJU REMONTS</strong>
+            </h2>
+
+            <!--Accordion wrapper-->
+            <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                <!-- Card body -->
+                <div class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                  data-parent="#accordionEx">
+                  <div class="card-body">
+                  <p>Dzinējs ir viens no vissarežģītākajiem automašīnas agregātiem.<br>
+                  No motora tehniskā stāvokļa ir atkarīga tā jauda, degvielas un eļļas patēriņš, kā arī visa automobiļa ekspluatācija. <br>
+                  Tāpēc visā automobiļa ekspluatācijas laikā ir ļoti svarīgi savlaicīgi ievērot un novērst visus, tā atsevišķo mehānismu un sistēmas darbības traucējumus, kā arī veikt savlaicīgas apkopes. </p>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="card-body">
+              <div class="text-right">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aizvērt</button>
+                  <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Pirms pirkuma diagnostika -->
+<div class="modal fade" id="pirmsPirkumaDiag" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5">
+            <!--Carousel Wrapper-->
+            <div id="carousel-thumb2" class="carousel slide carousel-fade carousel-thumbnails"
+              data-ride="carousel">
+              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block w-100"
+                    src="img/AutoDiag.jpg"
+                    alt="Pirmais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoDiag2.jpg"
+                    alt="Otrais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoDiag3.jpg"
+                    alt="Trešais slaids">
+                </div>
+              </div>
+              <!--/.Slides-->
+              <!--Controls-->
+              <a class="carousel-control-prev" href="#carousel-thumb2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Iepriekšējais</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-thumb2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Nākamais</span>
+              </a>
+              <!--/.Controls-->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-thumb2" data-slide-to="0" class="active">
+                  <img src="img/AutoDiag.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb2" data-slide-to="1">
+                  <img src="img/AutoDiag2.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb2" data-slide-to="2">
+                  <img src="img/AutoDiag3.jpg" width="60">
+                </li>
+              </ol>
+            </div>
+            <!--/.Carousel Wrapper-->
+          </div>
+          <div class="col-lg-7">
+            <h2 class="h2-responsive product-name">
+              <strong>AUTO PIRMSPIRKUMA DIAGNOSTIKA</strong>
+            </h2>
+
+            <!--Accordion wrapper-->
+            <div class="accordion md-accordion" id="accordionEx2" role="tablist" aria-multiselectable="true">
+
+                <!-- Card body -->
+                <div class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                  data-parent="#accordionEx2">
+                  <div class="card-body">
+                  <p>Lai iegādātos patiešām labu lietoto auto, nepietiks vien ar acij tīkamākā modeļa izvēlēšanos un pārsimts metriem, kas aizvadīti iemēģinot automašīnu tā dēvētajā testa braucienā.<br>
+
+                    Auto iegāde ir visai laikietilpīgs process, kurā jārēķinās arī ar papildu izdevumiem, kas saistīti ar profesionālu automašīnas diagnostiku, vizuālā stāvokļa novērtēšanu, servisa apmeklējumu, auto elektrisko daļu pārbaudi un vairākiem citiem neatņemamiem auto pārbaudes elementiem pirms tā iegādes.<br> </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+             <div class="card-body">
+              <div class="text-right">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aizvērt</button>
+                  <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Elektro diag -->
+<div class="modal fade" id="ElektroDiagMod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5">
+            <!--Carousel Wrapper-->
+            <div id="carousel-thumb3" class="carousel slide carousel-fade carousel-thumbnails"
+              data-ride="carousel">
+              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block w-100"
+                    src="img/AutoElec.jpg"
+                    alt="Pirmais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoElec2.jpg"
+                    alt="Otrais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoElec3.jpg"
+                    alt="Trešais slaids">
+                </div>
+              </div>
+              <!--/.Slides-->
+              <!--Controls-->
+              <a class="carousel-control-prev" href="#carousel-thumb3" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Iepriekšējais</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-thumb3" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Nākamais</span>
+              </a>
+              <!--/.Controls-->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-thumb3" data-slide-to="0" class="active">
+                  <img src="img/AutoElec.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb3" data-slide-to="1">
+                  <img src="img/AutoElec2.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb3" data-slide-to="2">
+                  <img src="img/AutoElec3.jpg" width="60">
+                </li>
+              </ol>
+            </div>
+            <!--/.Carousel Wrapper-->
+          </div>
+          <div class="col-lg-7">
+            <h2 class="h2-responsive product-name">
+              <strong>ELEKTROSISTĒMU DIAGNOSTIKA – REMONTS</strong>
+            </h2>
+
+            <!--Accordion wrapper-->
+            <div class="accordion md-accordion" id="accordionEx3" role="tablist" aria-multiselectable="true">
+
+                <!-- Card body -->
+                <div class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                  data-parent="#accordionEx3">
+                  <div class="card-body">
+                  <p>Datordiagnostika lieliski palīdz noteikt un laicīgi novērst bojājumus, kas visbiežāk vizuāli nemaz nav pamanāmi. Mūsdienu auto lielākoties sastāv no elektronikas, kas nodrošina precīzu sistēmas darbību un komfortablus apstākļus auto vadītājam un pasažieriem. Lai atklātu bojājumus ir jāveic diagnostika, pēc kuras vadoties  mēs veicam tīrīšanu, pārbaudām detaļu nolietojumu un ja tas ir nepieciešams, veicam tās nomaiņu.</p><br> 
+                    </div>
+                </div>
+            </div>
+          </div>
+             <div class="card-body">
+              <div class="text-right">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aizvērt</button>
+                  <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Ritošā daļa -->
+<div class="modal fade" id="RitosaDalaMod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5">
+            <!--Carousel Wrapper-->
+            <div id="carousel-thumb4" class="carousel slide carousel-fade carousel-thumbnails"
+              data-ride="carousel">
+              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block w-100"
+                    src="img/AutoRit.jpg"
+                    alt="Pirmais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoRit2.jpg"
+                    alt="Otrais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoRit3.jpg"
+                    alt="Trešais slaids">
+                </div>
+              </div>
+              <!--/.Slides-->
+              <!--Controls-->
+              <a class="carousel-control-prev" href="#carousel-thumb4" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Iepriekšējais</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-thumb4" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Nākamais</span>
+              </a>
+              <!--/.Controls-->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-thumb4" data-slide-to="0" class="active">
+                  <img src="img/AutoRit.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb4" data-slide-to="1">
+                  <img src="img/AutoRit2.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb4" data-slide-to="2">
+                  <img src="img/AutoRit3.jpg" width="60">
+                </li>
+              </ol>
+            </div>
+            <!--/.Carousel Wrapper-->
+          </div>
+          <div class="col-lg-7">
+            <h2 class="h2-responsive product-name">
+              <strong>RITOŠĀS DAĻAS REMONTS</strong>
+            </h2>
+
+            <!--Accordion wrapper-->
+            <div class="accordion md-accordion" id="accordionEx4" role="tablist" aria-multiselectable="true">
+
+                <!-- Card body -->
+                <div class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                  data-parent="#accordionEx4">
+                  <div class="card-body">
+                  <p>Automašīnas ritošās daļas galvenais uzdevums ir samazināt triecienus braucot pa nelīdzenu ceļa virsmu, kā arī nodrošināt drošu un ērtu pārvietošanos, tāpēc ritošā daļa regulāri tiek pakļauta paaugstinātai slodzei un to būtu nepieciešams pārbaudīt vismaz reizi pusgadā. <br>Mūsu autoservisā kvalificēti speciālisti ar vairāku gadu pieredzi auto remonta un apkalpošanas jomā veiks Jūsu automašīnai profesionālu ritošās daļas diagnostiku un remontu uzstādot kvalitatīvas detaļas, par labākajām cenām.</p><br> 
+                    </div>
+                </div>
+            </div>
+          </div>
+             <div class="card-body">
+              <div class="text-right">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aizvērt</button>
+                  <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Pretkorozijas apstrade -->
+<div class="modal fade" id="PretKorMod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5">
+            <!--Carousel Wrapper-->
+            <div id="carousel-thumb5" class="carousel slide carousel-fade carousel-thumbnails"
+              data-ride="carousel">
+              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block w-100"
+                    src="img/AutoMet.jpg"
+                    alt="Pirmais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoMet2.jpg"
+                    alt="Otrais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoMet3.jpg"
+                    alt="Trešais slaids">
+                </div>
+              </div>
+              <!--/.Slides-->
+              <!--Controls-->
+              <a class="carousel-control-prev" href="#carousel-thumb5" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Iepriekšējais</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-thumb5" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Nākamais</span>
+              </a>
+              <!--/.Controls-->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-thumb5" data-slide-to="0" class="active">
+                  <img src="img/AutoMet.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb5" data-slide-to="1">
+                  <img src="img/AutoMet2.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb5" data-slide-to="2">
+                  <img src="img/AutoMet3.jpg" width="60">
+                </li>
+              </ol>
+            </div>
+            <!--/.Carousel Wrapper-->
+          </div>
+          <div class="col-lg-7">
+            <h2 class="h2-responsive product-name">
+              <strong>PRETKOROZIJAS APSTRĀDE UN METINĀŠANA</strong>
+            </h2>
+
+            <!--Accordion wrapper-->
+            <div class="accordion md-accordion" id="accordionEx5" role="tablist" aria-multiselectable="true">
+
+                <!-- Card body -->
+                <div class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                  data-parent="#accordionEx5">
+                  <div class="card-body">
+                  <p> ... </p><br> 
+                    </div>
+                </div>
+            </div>
+          </div>
+             <div class="card-body">
+              <div class="text-right">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aizvērt</button>
+                  <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Riepu montāža -->
+<div class="modal fade" id="RiepuMontMod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-5">
+            <!--Carousel Wrapper-->
+            <div id="carousel-thumb6" class="carousel slide carousel-fade carousel-thumbnails"
+              data-ride="carousel">
+              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block w-100"
+                    src="img/AutoRiep.jpg"
+                    alt="Pirmais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoRiep2.jpg"
+                    alt="Otrais slaids">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100"
+                    src="img/AutoRiep3.jpg"
+                    alt="Trešais slaids">
+                </div>
+              </div>
+              <!--/.Slides-->
+              <!--Controls-->
+              <a class="carousel-control-prev" href="#carousel-thumb6" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Iepriekšējais</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-thumb6" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Nākamais</span>
+              </a>
+              <!--/.Controls-->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-thumb6" data-slide-to="0" class="active">
+                  <img src="img/AutoRiep.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb6" data-slide-to="1">
+                  <img src="img/AutoRiep2.jpg" width="60">
+                </li>
+                <li data-target="#carousel-thumb6" data-slide-to="2">
+                  <img src="img/AutoRiep3.jpg" width="60">
+                </li>
+              </ol>
+            </div>
+            <!--/.Carousel Wrapper-->
+          </div>
+          <div class="col-lg-7">
+            <h2 class="h2-responsive product-name">
+              <strong>RIEPU MONTĀŽA / BALANSĒŠANA</strong>
+            </h2>
+
+            <!--Accordion wrapper-->
+            <div class="accordion md-accordion" id="accordionEx6" role="tablist" aria-multiselectable="true">
+
+                <!-- Card body -->
+                <div class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                  data-parent="#accordionEx6">
+                  <div class="card-body">
+                  <p>Ikviens atbildīgs transportlīdzekļa īpašnieks zina, ka riepu nomaiņu jāveic vismaz divas reizes gada laikā – pārejot uz ziemas un vasaras sezonām. Protams, mēdz būt gadījumi, kad serviss jāapmeklē biežāk, jo esošais komplekts jau nokalpojis savu laiku. Ja vēlies, lai tavs auto tiktu pienācīgi aprūpēts!<br> 
+                  Riepu balansēšana ir darbība, kuru kvalitatīvi autoservisi veic pie katras riepu nomaiņas. Automašīnas riteņi tiek uzlikti uz īpašas ierīces – balansējamā iekārtas, kas riteņus griež noteiktā ātrumā, un pēc tam dators parāda nolasītos datus par to, cik līdzsvaroti un vienmērīgi kustas katrs ritenis.<br> 
+                  Riepu balansēšana uzlabo braukšanas kvalitāti, tā novēršot vibrācijas, ko rada nenobalasēts riepa. 
+                    </div>
+                </div>
+            </div>
+          </div>
+             <div class="card-body">
+              <div class="text-right">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aizvērt</button>
+                  <i class="fas fa-cart-plus ml-2" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<body>
+
+    <div class="main_container">
+    <div class="col-sm-10">
+    <h2>Servisu apmeklējušie auto</h2>
+    </div>
+
+         <div class="right_col" role="main">
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+
+                        {# Galds #}
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Numura zīmes</th>
+                                <th>Marka</th>
+                                <th>Modelis</th>
+                                <th class="HideCollum700">Pēdējo reizi rediģēts</th>
+                                <th>Opcijas</th>   
+                            </tr>
+                        </thead>
+                    {% for vehHistorys in vehHistory|reverse %}
+                        <tr class="accordion-toggle" data-toggle="collapse">
+                        {# <tr class="accordion-toggle" data-toggle="collapse" data-target="#dataTable_{{vehHistorys.vehId}}"> #}
+                            <td>{{vehHistorys.nummberPlate|upper}}</td>
+                            <td>{{vehHistorys.brand|capitalize}}</td>
+                            <td>{{vehHistorys.model|capitalize}}</td>
+                            <td class="HideCollum700">{{vehHistorys.dateUpdated|date("m/d/Y h:i:s")}}</td>
+                            
+                            {# <td><button type="button" class="btn">
+                                <a href="#ModalShow_{{vehHistorys.id}}" class="bi bi-search" data-toggle="modal"></a>
+                            </button> #}
+                            {% set modalVehicleHistoryVehId = vehHistorys.id %}
+                            <td><a data-bs-toggle="modal" href="#ModalShow_{{modalVehicleHistoryVehId}}" role="button"><i class="bi bi-search"></i></a>
+                            {% include "vehicleHistoryForm.twig" %}
+                            {% if vehHistorys.paid == 1 %}
+                            <i style="color: green;" class="bi bi-check-circle-fill"></i>
+                            {% else %}
+                            <i style="color: red;" class="hideCont{{modalVehicleHistoryVehId}} bi bi-exclamation-circle-fill"></i>
+                            <i style="color: green;" class="showCont{{modalVehicleHistoryVehId}} hidden bi bi-check-circle-fill"></i>
+                            </td>
+                            {% endif %}
+
+                            
+                            {# {% include "vehicleHistoryExtension.twig" %} #}
+                        </tr>  
+                    {% endfor %}         
+                    </table>
+               </div>
+            </div>
+        </div>
+
+</div>

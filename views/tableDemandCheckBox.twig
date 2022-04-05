@@ -1,0 +1,78 @@
+{# Nepieciešams lai strādātu korekti ajax #}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+
+{% if request.req_Seen == 0 %} 
+    <input type="checkbox" name='sid[]' data-sid='$sid' class="chk" value='{{request.id}}'>
+{% else %} 
+    <input type="checkbox" name='sid[]' data-sid='$sid' class="chk2" value='{{request.id}}' checked>
+{% endif %} 
+<script>
+
+{# Ja checkbox nav atzīmēts         #}
+    $(document).ready(function () {
+            $('.chk').click(function (event) {
+            var sid = $(this).val()
+
+                if (this.checked) {
+                        //console.log('True');
+                        var checkVal = 1
+                        $.ajax({
+                            url: '/users/requestSeen',
+                            type: 'POST',
+                            dataType: 'html',
+                            data: {
+                            sid: sid,
+                            checkVal: checkVal,
+                            },
+                        });
+                } else {
+                       // console.log('false');
+                        var checkVal = 0
+                        $.ajax({
+                            url: '/users/requestSeen',
+                            type: 'POST',
+                            dataType: 'html',
+                            data: {
+                            sid: sid,
+                            checkVal: checkVal,
+                            },
+                        });                    
+                }
+            });
+
+    });
+
+{# Ja checkbox ir atzīmēts #}
+    $(document).ready(function () {
+            $('.chk2').click(function (event) {
+            var sid = $(this).val()
+
+                if (this.checked) {
+                        //console.log('True');
+                        var checkVal = 1
+                        $.ajax({
+                            url: '/users/requestSeen',
+                            type: 'POST',
+                            dataType: 'html',
+                            data: {
+                            sid: sid,
+                            checkVal: checkVal,
+                            },
+                        });
+                } else {
+                    //console.log('false');
+                        var checkVal = 0
+                        $.ajax({
+                            url: '/users/requestSeen',
+                            type: 'POST',
+                            dataType: 'html',
+                            data: {
+                            sid: sid,
+                            checkVal: checkVal,
+                            },
+                        });                    
+                }
+            });
+
+    });
+</script>

@@ -1,0 +1,64 @@
+{# Modālais logs sīkākam PIEPRASĪJUMU info #}
+
+<div class="modal fade" id="RequestModal_{{request.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Plašāks apraksts</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="row">
+            <div class="col-md-3 pr-1">
+                <div class="form-group">
+                    <label><b>Vārds un uzvārds:</b> {{request.name|title}} {{request.surname|title}}</label>
+                </div>
+            </div>
+            <div class="col-md-3 pr-1">
+                <div class="form-group">
+                    <label><b>Telefona numurs:</b> {{request.telNr}}</label>
+                </div>
+            </div>
+            <div class="col-md-3 pr-1">
+                <div class="form-group">
+                    <label><b>E-pasts:</b> {{request.email}}</label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3 pr-1">
+                <div class="form-group">
+                    <label><b>Auto:</b> {{request.veh|capitalize}}</label>
+                </div>
+            </div>
+            <div class="col-md-9 pr-1">
+                <div class="form-group">
+                    <label><b>Automašīnas ReģNr/Vin:</b> {{request.vinOrReg|upper}}</label>
+                </div>
+            </div>
+        </div>
+        <br>    
+        <div class="row">
+            <div class="col-md-12 pr-1">
+                <div class="form-group">
+                    <label><b>Problēma:</b> {{request.problem}}</label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3 pr-1">
+                <div class="form-group">
+                    <label><b>Vēlamais datums:</b> {{request.date}}</label>
+                </div>
+            </div>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aizvērt</button>   
+      </div>
+    </div>
+  </div>
+</div>

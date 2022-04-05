@@ -1,0 +1,23 @@
+                        <tr>
+                            <td colspan='2' class="accordion-body collapse" id="dataTable_{{vehHistorys.vehId}}">
+                                <table id="example" class="table table-striped responsive-utilities jambo_table">
+                                    <thead>
+                                        <tr class="headings">
+                                            <th>Numura zīmes</th>
+                                            <th>Marka</th>
+                                            <th>Modelis</th>
+                                            <th>Rediģēts</th>
+                                            <th>Darbības</th>
+                                        </tr>
+                                    </thead>
+                                    
+                        <tr>
+                            <td>{{vehHistorys.nummberPlate}}</td>
+                            <td>{{vehHistorys.brand}}</td>
+                            <td>{{vehHistorys.model}}</td>
+                            <td>{{vehHistorys.dateUpdated|date("m/d/Y h:i:s")}}</td>
+                            <td><a data-bs-toggle="modal" href="#ModalShow"><i class="bi bi-search"></i></a></td>
+                        </tr>
+                        </tr>
+                        </table>
+                        
