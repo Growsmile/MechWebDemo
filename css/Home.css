@@ -1,0 +1,196 @@
+.hidden {
+  display: none;
+}
+
+#h1 {text-align: center;}
+.h1, .h2, .h3{font-family: "Times New Roman", Times, serif;}
+.p {font-family: "Times New Roman", Times, serif;}
+#h2 {text-align: center;}
+li {color:#ddd;}
+#centret{
+text-align: center;
+}
+#form1 {
+margin-left: 50%;
+margin-right: 50%;
+} 
+body, html {
+height: 100%;
+}
+.logo a{
+  text-decoration: none;
+  font-size: 22px;
+  font-family: poppins;
+  color: #fff;
+  letter-spacing: 4px;
+  margin-left: 77px;
+}
+
+.BText {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-family: "Times New Roman", Times, serif !important;
+}
+.navbar-custom {
+  background-color: #181a1df1
+}
+
+@media screen {
+  #whiteBg {
+      display: none;
+  }
+}
+@media print {
+ #whiteBg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+ }
+ #blocket{
+  display: none; 
+}
+#contactus input[type="text"], #contactus input[type="email"], #contactus input[type="tel"], #contactus input[type="url"], #contactus textarea{
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+img.bw {
+	filter: grayscale(0);
+}
+}
+
+
+.ServisaApTab {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contactus {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  padding: 25px;
+}
+
+#contactus h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contactus h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contactus input[type="text"],
+#contactus input[type="email"],
+#contactus input[type="tel"],
+#contactus input[type="url"],
+#contactus textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contactus input[type="text"]:hover,
+#contactus input[type="email"]:hover,
+#contactus input[type="tel"]:hover,
+#contactus input[type="url"]:hover,
+#contactus textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contactus textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contactus button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #007bff;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contactus button[type="submit"]:hover {
+  background: #006ee4;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contactus button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contactus input:focus,
+#contactus textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+.colorWhite{
+  color: White!important;;
+}
+
+.galleryPadding{
+  padding-top: 100px;
+  background-color: rgb(239, 237, 232);
+}
+
+#canva{
+  height: 100%;
+  width: 100%;
+  background-color: #3b3b3b;
+  position: absolute;
+  clip-path: polygon(0 16%, 100% 23%, 100% 60%, 0 60%);
+  margin-top: -228px;
+
+}
+.grey{
+  background-color: #3b3b3b;
+}

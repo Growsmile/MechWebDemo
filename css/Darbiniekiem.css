@@ -1,0 +1,68 @@
+.hidden {
+    display: none;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+#rowWidth70 { 
+    width: 70%;
+}
+#rowWidth10 { 
+    width: 10%;
+}
+
+@media only screen and (max-width: 850px) {
+    .HideCollum850{
+        display:none;
+    }
+
+}
+@media only screen and (max-width: 700px) {
+    .HideCollum700{
+        display:none;
+    }
+    
+}
+@media only screen and (max-width: 710px) {
+    .HideCollum710{
+        display:none;
+    }
+    
+}
+
+@media only screen and (max-width: 380px) {
+    .HideCollum380{
+        display:none;
+    }
+    
+}
+
+
+/* Printēšanas lapa */
+@media print {
+
+    body {
+        margin: 0;
+        color: #000;
+        background-color: #fff;
+    }
+    .FontSize1vw1{
+        font-size:1.1vw;
+    }
+    .FontSize3vw{
+        font-size:3vw;
+    }
+    .FontSize1vw{
+        font-size:1vw;
+    }
+    .FontSize09vw{
+        font-size:0.9vw;
+    }
+    .PrintNoTextWrap{
+        white-space: nowrap
+    }        
+
+}
